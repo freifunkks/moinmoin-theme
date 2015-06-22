@@ -1,0 +1,23 @@
+@import "flexbox";
+
+/* Wrapper */
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+/* Page wrap */
+.page-wrap {
+  @include display-flex;
+
+  .page-content {
+    margin-left: 32px;
+  }
+}
+
+.page-content {
+  p {
+    padding-left: 16px;
+  }
+}

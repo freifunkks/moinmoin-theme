@@ -1,0 +1,45 @@
+@import "flexbox";
+
+.line {
+  @include display-flex;
+
+  margin: 16px 0;
+
+  > div {
+    @include flex(1);
+
+    margin: 0 14px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.video, .map {
+  background: #ddd;
+  height: 300px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.line-2 {
+  > div {
+    margin-top: 26px;
+    padding: 6px 24px;
+  }
+
+  h3 {
+    margin: 10px 0 12px;
+    font-style: oblique;
+  }
+}
+
+.learn      { background-color: #ffd97f; }
+.connect    { background-color: #ed7fb2; }
+.contribute { background-color: #7fceef; }
