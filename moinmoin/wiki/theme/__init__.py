@@ -492,7 +492,7 @@ class ThemeBase:
             pagename, link = self.splitNavilink(text, localize=0)
             if not pagename in found:
                 if pagename == current:
-                    cls = 'userlink current'
+                    cls = 'userlink active'
                 else:
                     cls = 'userlink'
                 items.append(item % (cls, pagename, pagename))
