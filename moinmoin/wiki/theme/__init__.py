@@ -1004,18 +1004,14 @@ var search_hint = "%(search_hint)s";
             'print',
             'RenderAsDocbook',
             'refresh',
-            '__separator__',
             'SpellCheck',
             'LikePages',
             'LocalSiteMap',
-            '__separator__',
             'RenamePage',
             'CopyPage',
             'DeletePage',
-            '__separator__',
             'MyPages',
             'SubscribeUser',
-            '__separator__',
             'Despam',
             'revert',
             'PackagePages',
@@ -1026,7 +1022,6 @@ var search_hint = "%(search_hint)s";
             # action: menu title
             '__title__': _("More Actions:"),
             # Translation may need longer or shorter separator
-            '__separator__': _('------------------------'),
             'raw': _('Raw Text'),
             'print': _('Print View'),
             'refresh': _('Delete Cache'),
@@ -1046,8 +1041,7 @@ var search_hint = "%(search_hint)s";
             }
 
         options = []
-        option = '<li><a href="?action=%(action)s">%(disabled)s%(title)s</a></li>'
-        option_disabled = '<li%(disabled)s><span class="%(action)s">%(title)s</span></li>'
+        option = '<li%(disabled)s><a href="?action=%(action)s">%(title)s</a></li>'
         # class="disabled" is a workaround for browsers that ignore
         # "disabled", e.g IE, Safari
         # for XHTML: data['disabled'] = ' disabled="disabled"'
@@ -1088,24 +1082,22 @@ var search_hint = "%(search_hint)s";
                 data['action'] = 'show'
 
             # Actions which are not available for this wiki, user or page
-            if (action == '__separator__' or
-                (action[0].isupper() and not action in available)):
+            if (action[0].isupper() and not action in available):
                 data['disabled'] = disabled
 
-            if data['disabled'] is disabled and action is not '__separator__':
-                options.append(option_disabled % data)
-            elif action is not '__separator__':
-                options.append(option % data)
+            options.append(option % data)
 
         # Add custom actions not in the standard menu, except for
         # some actions like AttachFile (we have them on top level)
         more = [item for item in available if not item in titles and not item in ('AttachFile', )]
         more.sort()
         if more:
-            # Add separator
-            separator = option % {'action': 'show', 'disabled': disabled,
-                                  'title': titles['__separator__']}
+            # TODO: This is the one place where a separator might make sense...
+            #       But not in the form of a text consisting of dashes!
+            #separator = option % {'action': 'show', 'disabled': disabled,
+            #                      'title': titles['__separator__']}
             #options.append(separator)
+
             # Add more actions (all enabled)
             for action in more:
                 data = {'action': action, 'disabled': ''}
@@ -1118,16 +1110,25 @@ var search_hint = "%(search_hint)s";
                 data['title'] = _(title)
                 options.append(option % data)
 
+        # remove trailing ':' if it exists
+        label = titles['__title__']
+        if label.endswith(':'):
+            label = label[:-1]
+
         data = {
-            'label': titles['__title__'],
+            'label': label,
             'options': '\n'.join(options),
             'rev_field': rev and '<input type="hidden" name="rev" value="%d">' % rev or '',
             'do_button': _("Do"),
             'url': self.request.href(page.page_name)
             }
-        html = '<ul>%(label)s%(options)s</ul>' % data
+        html = '''
+<input type="checkbox" id="actionsMenuDropDown" />
+<label for="actionsMenuDropDown">%(label)s</label>
+<ul>%(options)s</ul>
+'''
 
-        return html
+        return html % data
 
     def editbar(self, d):
         """ Assemble the page edit bar.
