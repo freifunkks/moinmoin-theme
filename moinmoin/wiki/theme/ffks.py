@@ -31,7 +31,7 @@ class Theme(ThemeBase):
             self.logo(),
 
 
-            u'<header class="header-wrap">',
+            u'<header class="site-header">',
 
     		# v Social
             u'<div class="social">',
@@ -77,7 +77,6 @@ class Theme(ThemeBase):
             self.navibar(d),
             #u'<hr id="pageline">',
             #u'<div id="pageline"><hr style="display:none;"></div>',
-            self.msg(d),
             u'</header>',
 
             u'</div>',
@@ -93,6 +92,7 @@ class Theme(ThemeBase):
             # Post header custom html (not recommended)
             self.emit_custom_html(self.cfg.page_header2),
 
+            self.msg(d),
             self.editbar(d),
             self.title(d),
 

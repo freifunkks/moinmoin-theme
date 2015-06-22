@@ -205,7 +205,7 @@ class ThemeBase:
         if self.cfg.logo_string:
             page = wikiutil.getFrontPage(self.request)
             logo = page.link_to_raw(self.request, self.cfg.logo_string)
-            html = u'''<div id="logo">%s</div>''' % logo
+            html = u'''%s''' % logo
         return html
 
     def interwiki(self, d):
