@@ -1,2 +1,6 @@
 .sass-cache
 wikistatic/ffks/css/main.css.map
+*.swp
+*.swo
+.*.swp
+.*.swo
