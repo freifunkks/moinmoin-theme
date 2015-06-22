@@ -1047,10 +1047,11 @@ var search_hint = "%(search_hint)s";
 
         options = []
         option = '<li><a href="?action=%(action)s">%(disabled)s%(title)s</a></li>'
+        option_disabled = '<li%(disabled)s><span class="%(action)s">%(title)s</span></li>'
         # class="disabled" is a workaround for browsers that ignore
         # "disabled", e.g IE, Safari
         # for XHTML: data['disabled'] = ' disabled="disabled"'
-        disabled = ' disabled class="disabled"'
+        disabled = ' class="disabled"'
 
         # Format standard actions
         available = get_available_actions(request.cfg, page, request.user)
@@ -1091,7 +1092,9 @@ var search_hint = "%(search_hint)s";
                 (action[0].isupper() and not action in available)):
                 data['disabled'] = disabled
 
-            if not data['disabled'] is disabled:
+            if data['disabled'] is disabled and action is not '__separator__':
+                options.append(option_disabled % data)
+            elif action is not '__separator__':
                 options.append(option % data)
 
         # Add custom actions not in the standard menu, except for
@@ -1122,7 +1125,7 @@ var search_hint = "%(search_hint)s";
             'do_button': _("Do"),
             'url': self.request.href(page.page_name)
             }
-        html = '<ul>%(options)s</ul>' % data
+        html = '<ul>%(label)s%(options)s</ul>' % data
 
         return html
 
