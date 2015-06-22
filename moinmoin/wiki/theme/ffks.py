@@ -144,7 +144,7 @@ class Theme(ThemeBase):
             self.emit_custom_html(self.cfg.page_footer1),
 
             # Footer
-            u'<div id="footer">',
+            u'<div id="site-footer">',
 
     		# Two times needed?
             #self.editbar(d),

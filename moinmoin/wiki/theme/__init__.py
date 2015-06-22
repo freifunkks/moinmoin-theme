@@ -1046,7 +1046,7 @@ var search_hint = "%(search_hint)s";
             }
 
         options = []
-        option = '<option value="%(action)s"%(disabled)s>%(title)s</option>'
+        option = '<li><a href="?action=%(action)s">%(disabled)s%(title)s</a></li>'
         # class="disabled" is a workaround for browsers that ignore
         # "disabled", e.g IE, Safari
         # for XHTML: data['disabled'] = ' disabled="disabled"'
@@ -1091,7 +1091,8 @@ var search_hint = "%(search_hint)s";
                 (action[0].isupper() and not action in available)):
                 data['disabled'] = disabled
 
-            options.append(option % data)
+            if not data['disabled'] is disabled:
+                options.append(option % data)
 
         # Add custom actions not in the standard menu, except for
         # some actions like AttachFile (we have them on top level)
@@ -1101,7 +1102,7 @@ var search_hint = "%(search_hint)s";
             # Add separator
             separator = option % {'action': 'show', 'disabled': disabled,
                                   'title': titles['__separator__']}
-            options.append(separator)
+            #options.append(separator)
             # Add more actions (all enabled)
             for action in more:
                 data = {'action': action, 'disabled': ''}
@@ -1121,28 +1122,7 @@ var search_hint = "%(search_hint)s";
             'do_button': _("Do"),
             'url': self.request.href(page.page_name)
             }
-        html = '''
-<form class="actionsmenu" method="GET" action="%(url)s">
-<div>
-    <label>%(label)s</label>
-    <select name="action"
-        onchange="if ((this.selectedIndex != 0) &&
-                      (this.options[this.selectedIndex].disabled == false)) {
-                this.form.submit();
-            }
-            this.selectedIndex = 0;">
-        %(options)s
-    </select>
-    <input type="submit" value="%(do_button)s">
-    %(rev_field)s
-</div>
-<script type="text/javascript">
-<!--// Init menu
-actionsMenuInit('%(label)s');
-//-->
-</script>
-</form>
-''' % data
+        html = '<ul>%(options)s</ul>' % data
 
         return html
 
