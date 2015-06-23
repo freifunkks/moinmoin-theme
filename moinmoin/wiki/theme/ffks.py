@@ -94,7 +94,8 @@ class Theme(ThemeBase):
 
             self.msg(d),
             self.editbar(d),
-            self.title(d),
+            # No page title for now
+            #self.title(d),
 
             # Start of page
             self.startPage(),
