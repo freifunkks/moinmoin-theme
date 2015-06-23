@@ -54,7 +54,8 @@ a {
 }
 
 /* External Links */
-a.http {
+a.http,
+a.https {
   color: $freifunk-blue;
   text-decoration: none;
   transition: color .4s;
