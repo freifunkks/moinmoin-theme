@@ -53,6 +53,11 @@ a {
   }
 }
 
+/* External Links */
+a.http {
+	color: $freifunk-blue;
+}
+
 /* "Seamless" iframes */
 iframe {
   border: none;
