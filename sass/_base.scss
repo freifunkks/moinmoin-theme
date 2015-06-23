@@ -55,7 +55,18 @@ a {
 
 /* External Links */
 a.http {
-	color: $freifunk-blue;
+  color: $freifunk-blue;
+  text-decoration: none;
+  transition: color .4s;
+
+  &:visited {
+    color: darken($freifunk-blue, 15%);
+  }
+
+  &:hover {
+    color: $freifunk-yellow;
+    text-decoration: none;
+  }
 }
 
 /* "Seamless" iframes */
