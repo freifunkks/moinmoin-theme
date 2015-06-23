@@ -70,6 +70,22 @@ a.https {
   }
 }
 
+/* Non-existent Links */
+a.nonexistent {
+  color: $grey-color-light;
+  text-decoration: none;
+  transition: color .4s;
+
+  &:visited {
+    color: $grey-color;
+  }
+
+  &:hover {
+    color: $freifunk-yellow;
+    text-decoration: none;
+  }
+}
+
 /* "Seamless" iframes */
 iframe {
   border: none;
