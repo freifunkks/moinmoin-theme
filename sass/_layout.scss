@@ -19,8 +19,19 @@
 
 .page-content {
   margin-top: 70px;
+  margin-left: 228px;
 
   p {
     padding-left: 16px;
   }
+
+  ul li p {
+    padding-left: 0;
+  }
+
+  /* Wide pages */
+  .wide-page{
+    margin-left: -228px;
+  }
 }
+
