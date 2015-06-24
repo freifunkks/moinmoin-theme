@@ -2,6 +2,7 @@
 
 .editbar {
   position: absolute;
+  z-index: 1;
 
   @include display-flex;
   @include align-items(flex-start);
