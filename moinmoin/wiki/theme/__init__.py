@@ -503,13 +503,13 @@ class ThemeBase:
             title = d['page'].split_title()
             title = self.shortenPagename(title)
             link = d['page'].link_to(request, title)
-            cls = 'page-link current'
+            cls = 'page-link active'
             items.append(item % (cls, title, title))
 
         # Add sister pages.
         for sistername, sisterurl in request.cfg.sistersites:
             if sistername == request.cfg.interwikiname: # it is THIS wiki
-                cls = 'sisterwiki current'
+                cls = 'sisterwiki active'
                 items.append(item % (cls, sistername))
             else:
                 # TODO optimize performance
