@@ -1,6 +1,6 @@
-/* Mixing to make flexbox work in all browsers that support it
-   The -ms-* properties look different sometimes because IE 10
-   uses an older syntax and IE 11 supports flexbox unprefixed */
+// Mixins to make flexbox work in all browsers that support it
+// The -ms-* properties look different sometimes because IE 10
+// uses an older syntax and IE 11 supports flexbox unprefixed
 
 // --- flex container ---
 
@@ -95,8 +95,8 @@
   order: $val;
 }
 
-/* flex-grow, flex-shrink and flex-basis are not supported in the
-   older flexbox syntax, can be set through the flex property */
+// flex-grow, flex-shrink and flex-basis are not supported in the
+// older flexbox syntax, can be set through the flex property
 @mixin flex($val) {
   -ms-flex: $val;
   -webkit-flex: $val;

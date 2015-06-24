@@ -5,6 +5,7 @@
   max-width: $content-width;
   margin: 0 auto;
   padding: 0 16px 48px;
+  position: relative;
 }
 
 /* Page wrap */
@@ -17,6 +18,8 @@
 }
 
 .page-content {
+  margin-top: 70px;
+
   p {
     padding-left: 16px;
   }

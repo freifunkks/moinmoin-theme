@@ -1124,8 +1124,10 @@ var search_hint = "%(search_hint)s";
             }
         html = '''
 <input type="checkbox" id="actionsMenuDropDown" />
-<label for="actionsMenuDropDown">%(label)s</label>
-<ul>%(options)s</ul>
+<label for="actionsMenuDropDown">%(label)s <i class="fa fa-caret-down"></i></label>
+<div class="actionsMenuWrap">
+    <ul class="actionsMenu">%(options)s</ul>
+</div>
 '''
 
         return html % data

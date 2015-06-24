@@ -13,7 +13,7 @@ $height-ubiquiti: 168px;
 .version {
   display: none;
 
-  & + label {
+  + label {
     display: block;
     color: #fff;
     cursor: pointer;
