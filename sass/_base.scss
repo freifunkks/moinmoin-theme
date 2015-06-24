@@ -86,6 +86,11 @@ a.nonexistent {
   }
 }
 
+/* Tables */
+tr:nth-child(even) {
+    background: $grey-color-lightest;
+}
+
 /* "Seamless" iframes */
 iframe {
   border: none;
