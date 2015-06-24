@@ -91,6 +91,13 @@ tr:nth-child(even) {
     background: $grey-color-lightest;
 }
 
+/* Form elements */
+input {
+	box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.15)
+	border: none;
+	padding: 6px 16px;
+}
+
 /* "Seamless" iframes */
 iframe {
   border: none;
