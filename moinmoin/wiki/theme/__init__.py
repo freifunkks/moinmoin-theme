@@ -500,12 +500,12 @@ class ThemeBase:
                 found[pagename] = 1
 
         # Add current page at end of local pages
-        if not current in found:
-            title = d['page'].split_title()
-            title = self.shortenPagename(title)
-            link = d['page'].link_to(request, title)
-            cls = 'page-link active'
-            items.append(item % (cls, title, title))
+        #if not current in found:
+        #    title = d['page'].split_title()
+        #    title = self.shortenPagename(title)
+        #    link = d['page'].link_to(request, title)
+        #    cls = 'page-link active'
+        #    items.append(item % (cls, title, title))
 
         # Add sister pages.
         for sistername, sisterurl in request.cfg.sistersites:
