@@ -61,14 +61,6 @@ class Theme(ThemeBase):
     		u'</a>',
             u'</li>',
 
-    		# RSS
-            u'<li>',
-    		u'<a target="_blank" href="https://twitter.com/freifunkks">',
-    		u'<i class="fa fa-rss"></i>',
-    		u'Neuigkeiten',
-    		u'</a>',
-            u'</li>',
-
             u'</ul>',
             u'</div>',
     		# ^ Social
@@ -82,7 +74,7 @@ class Theme(ThemeBase):
             u'</div>',
 
     		# do we need a search?
-            #self.searchform(d),
+            self.searchform(d),
 
     		# not used?!
             #self.interwiki(d),
