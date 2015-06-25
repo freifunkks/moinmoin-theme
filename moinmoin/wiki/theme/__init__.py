@@ -777,18 +777,22 @@ class ThemeBase:
         if self.shouldShowPageinfo(page):
             info = page.lastEditInfo()
             if info:
-                if info['editor']:
-                    info = _("last edited %(time)s by %(editor)s") % info
-                else:
-                    info = _("last modified %(time)s") % info
-                pagename = page.page_name
-                if self.request.cfg.show_interwiki:
-                    pagename = "%s: %s" % (self.request.cfg.interwikiname, pagename)
-                info = "%s  (%s)" % (wikiutil.escape(pagename), info)
+                #if info['editor']:
+                #    info = _("last edited %(time)s by %(editor)s") % info
+                #else:
+                #    info = _("last modified %(time)s") % info
+                #pagename = page.page_name
+                #if self.request.cfg.show_interwiki:
+                #    pagename = "%s: %s" % (self.request.cfg.interwikiname, pagename)
+                #info = "%s  (%s)" % (wikiutil.escape(pagename), info)
+                info = _("last modified %(time)s") % info
                 html = '<p id="pageinfo" class="info"%(lang)s>%(info)s</p>\n' % {
                     'lang': self.ui_lang_attr(),
                     'info': info
                     }
+                #html = str(info)
+                #html = unicodedata.normalize('NFKD', info).encode('ascii','ignore')
+                #html = str(info).encode('ascii','ignore')
         return html
 
     def searchform(self, d):
