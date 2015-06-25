@@ -1,0 +1,9 @@
+/* Alternating rows */
+table.alt-even tr:nth-child(even) {
+  background: $grey-color-lightest;
+}
+
+table.alt-odd tr:nth-child(odd) {
+  background: $grey-color-lightest;
+}
+
