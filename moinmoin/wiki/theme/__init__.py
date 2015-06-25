@@ -135,6 +135,7 @@ class ThemeBase:
         ('all',         'main'),
         ('all',         'normalize'),
         ('all',         'font-awesome.min'),
+        ('all',         'ionicons.min'),
         ('screen',      'screen'),
         ('print',       'print'),
         ('projection',  'projection'),
