@@ -6,6 +6,7 @@
 
   @include display-flex;
   @include align-items(flex-start);
+  @include align-items(center);
 
   padding: 8px 6px 0 0;
   right: 0;
@@ -44,7 +45,7 @@
 
   margin-left: -19px;
   margin-top: 10px;
-  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: $outer-shadow;
   transition: max-height .4s;
 }
 

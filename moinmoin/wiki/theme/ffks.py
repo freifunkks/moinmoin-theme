@@ -74,7 +74,7 @@ class Theme(ThemeBase):
             u'</div>',
 
     		# do we need a search?
-            self.searchform(d),
+            #self.searchform(d),
 
     		# not used?!
             #self.interwiki(d),

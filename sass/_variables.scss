@@ -20,6 +20,11 @@ $grey-color-lighter: lighten($grey-color, 40%);
 $grey-color-lightest: lighten($grey-color, 44%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+// Shadows
+$inner-shadow-deep: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.15);
+$inner-shadow-high: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.15);
+$outer-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.15);
+
 // Width of the content area
 $content-width:    960px;
 

@@ -1,0 +1,31 @@
+#searchform div {
+  box-shadow: $inner-shadow-deep;
+  & * {
+    background: none;
+  }
+  & button {
+    border: none;
+    color: $grey-color-light;
+    margin-left: 6px;
+  }
+  & input {
+    box-shadow: none;
+    padding: 6px 16px 6px 0;
+    width: 160px;
+
+    & ::-webkit-input-placeholder { /* WebKit browsers */
+      color:    #909;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #909;
+      opacity:  1;
+    }
+    & ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #909;
+      opacity:  1;
+    }
+    & :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    #909;
+    }
+  }
+}

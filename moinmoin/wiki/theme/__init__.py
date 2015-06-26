@@ -820,25 +820,10 @@ class ThemeBase:
 <div>
 <input type="hidden" name="action" value="fullsearch">
 <input type="hidden" name="context" value="180">
-<label for="searchinput">%(search_label)s</label>
-<input id="searchinput" type="text" name="value" value="%(search_value)s" size="20"
-    onfocus="searchFocus(this)" onblur="searchBlur(this)"
-    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
-<input id="titlesearch" name="titlesearch" type="submit"
-    value="%(search_title_label)s" alt="Search Titles">
-<input id="fullsearch" name="fullsearch" type="submit"
-    value="%(search_full_label)s" alt="Search Full Text">
+<button id="fullsearch" name="fullsearch" type="submit"><i class="fa fa-search"></i></button>
+<input id="searchinput" type="text" name="value" placeholder="%(search_label)s" value="%(search_value)s" size="20" alt="Search">
 </div>
 </form>
-<script type="text/javascript">
-<!--// Initialize search form
-var f = document.getElementById('searchform');
-f.getElementsByTagName('label')[0].style.display = 'none';
-var e = document.getElementById('searchinput');
-searchChange(e);
-searchBlur(e);
-//-->
-</script>
 ''' % d
         return html
 
@@ -1164,8 +1149,12 @@ var search_hint = "%(search_hint)s";
                         items.append('<li class="toggleCommentsButton" style="display:none;">%s</li>' % item)
                     else:
                         items.append('<li>%s</li>' % item)
-            html = u'<ul class="editbar">%s</ul>\n' % ''.join(items)
+            html = u'<ul class="editbar">%s' % ''.join(items)
             self._cache['editbar'] = html
+
+        # Add search to edit bar
+        html += self.searchform(d)
+        html += u'</ul>\n'
 
         return html
 
