@@ -1,3 +1,4 @@
+/* Open Sans */
 @font-face {
   font: {
     family: "OpenSans";
@@ -5,7 +6,7 @@
     stretch: condensed;
   }
 
-  src: url("/fonts/OpenSans-CondLight.woff");
+  src: url("#{$font-dir}/OpenSans-CondLight.woff");
 }
 
 @font-face {
@@ -16,7 +17,7 @@
     style: italic;
   }
 
-  src: url("/fonts/OpenSans-CondLightItalic.woff");
+  src: url("#{$font-dir}/OpenSans-CondLightItalic.woff");
 }
 
 @font-face {
@@ -26,7 +27,7 @@
     style: italic;
   }
 
-  src: url("/fonts/OpenSans-Italic.woff");
+  src: url("#{$font-dir}/OpenSans-Italic.woff");
 }
 
 @font-face {
@@ -35,7 +36,7 @@
     weight: 300;
   }
 
-  src: url("/fonts/OpenSans-Light.woff");
+  src: url("#{$font-dir}/OpenSans-Light.woff");
 }
 
 @font-face {
@@ -45,7 +46,7 @@
     style: italic;
   }
 
-  src: url("/fonts/OpenSans-LightItalic.woff");
+  src: url("#{$font-dir}/OpenSans-LightItalic.woff");
 }
 
 @font-face {
@@ -54,7 +55,7 @@
     weight: 400;
   }
 
-  src: url("/fonts/OpenSans-Regular.woff");
+  src: url("#{$font-dir}/OpenSans-Regular.woff");
 }
 
 @font-face {
@@ -63,5 +64,20 @@
     weight: 600;
   }
 
-  src: url("/fonts/OpenSans-Semibold.woff");
+  src: url("#{$font-dir}/OpenSans-Semibold.woff");
 }
+
+/* Oxygen Mono */
+
+@font-face {
+    font-family: "OxygenMono";
+    src: url("#{$font-dir}/oxygenmono-regular-webfont.eot");
+    src: url("#{$font-dir}/oxygenmono-regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("#{$font-dir}/oxygenmono-regular-webfont.woff2") format("woff2"),
+         url("#{$font-dir}/oxygenmono-regular-webfont.woff") format("woff"),
+         url("#{$font-dir}/oxygenmono-regular-webfont.ttf") format("truetype"),
+         url("#{$font-dir}/oxygenmono-regular-webfont.svg#oxygen_monoregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+

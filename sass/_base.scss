@@ -10,8 +10,8 @@
 body {
   font: {
     family: $base-font-family;
-    size: 15px;
-    weight: 500;
+    size: $base-font-size;
+    weight: $base-font-weight;
   }
   color: $text-color;
   background-color: $background-color;
@@ -102,6 +102,15 @@ input {
 /* "Seamless" iframes */
 iframe {
   border: none;
+}
+
+/* Monospace fonts */
+pre,
+tt {
+  font: {
+    family: $mono-font-family;
+    size: $mono-font-size;
+  }
 }
 
 /* Misc */
