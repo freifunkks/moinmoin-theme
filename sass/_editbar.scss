@@ -1,12 +1,13 @@
 @import "flexbox", "variables";
 
 .editbar {
-  position: absolute;
+  position: relative;
   z-index: 1;
 
   @include display-flex;
   @include align-items(flex-start);
   @include align-items(center);
+  @include justify-content(flex-end);
 
   padding: 8px 6px 0 0;
   right: 0;
