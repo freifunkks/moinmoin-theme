@@ -84,8 +84,8 @@ class Theme(ThemeBase):
             # Post header custom html (not recommended)
             self.emit_custom_html(self.cfg.page_header2),
 
-            self.msg(d),
             self.editbar(d),
+            self.msg(d),
             # No page title for now
             #self.title(d),
 
