@@ -1,0 +1,20 @@
+/* MoinMoin diffs */
+td.diff-removed {
+  background-color: lighten($freifunk-magenta, 45%);
+  & span {
+    border:           none;
+    border-top:       1px solid $freifunk-magenta;
+    border-bottom:    1px solid $freifunk-magenta;
+    background-color: lighten($freifunk-magenta, 35%);
+  }
+}
+
+td.diff-added {
+  background-color: lighten($freifunk-blue, 45%);
+  & span {
+    border:           none;
+    border-top:       1px solid $freifunk-blue;
+    border-bottom:    1px solid $freifunk-blue;
+    background-color: lighten($freifunk-blue, 35%);
+  }
+}
