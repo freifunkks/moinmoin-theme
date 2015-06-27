@@ -1,0 +1,45 @@
+/* Messages on top of page */
+.message {
+  display: flex;
+  background-color: $freifunk-blue;
+  color: $white-color;
+  padding: 20px 36px;
+
+  & .fa{
+    display: inline;
+    font-size: 42px;
+  }
+
+  & .clear-link {
+    color: $white-color;
+  }
+  
+  & .clear-link:hover {
+    color: $freifunk-yellow;
+  }
+
+  & .error:before {
+    /* fa-times-circle */
+    content: "\f057";
+  }
+
+  & .clear-link:before {
+    /* fa-times */
+    content: "\f00d";
+  }
+
+  & .message-text {
+    padding-left: 20px;
+    @include flex(1);
+  }
+  
+  & .error:before,
+  & .clear-link:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+}
+

@@ -1,0 +1,26 @@
+/* Input elements */
+input {
+  box-shadow: $inner-shadow-deep;
+  border: none;
+  padding: 6px 16px;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  box-shadow: none;
+
+  font: {
+    weight: 300;
+    size: 16px;
+  }
+
+  color: #fff;
+  background-color: $freifunk-blue;
+  transition: background-color .4s;
+
+  &:hover {
+    background-color: $freifunk-yellow;
+  }
+}
+

@@ -629,23 +629,26 @@ class ThemeBase:
         msgs = d['msg']
 
         result = u""
-        close = d['page'].link_to(self.request, text=_('Clear message'), css_class="clear-link")
+        #close = d['page'].link_to(self.request, text=_('Clear message'), css_class="clear-link")
+        close = d['page'].link_to(self.request, ' ', css_class="clear-link")
         for msg, msg_class in msgs:
             try:
-                result += u'<p>%s</p>' % msg.render()
+                result += u'%s' % msg.render()
                 close = ''
             except AttributeError:
                 if msg and msg_class:
-                    result += u'<p><div class="%s">%s</div></p>' % (msg_class, msg)
+                    if  msg_class == 'error': msg_class = 'exclamation-circle'
+                    elif msg_class == 'info': msg_class = 'info-circle'
+                    result += u'<i class="fa fa-%s"></i><div class="message-text">%s</div>' % (msg_class, msg)
                 elif msg:
-                    result += u'<p>%s</p>\n' % msg
+                    result += u'%s\n' % msg
         if result:
             html = result + close
-            return u'<div id="message">\n%s\n</div>\n' % html
+            return u'<div class="message">\n%s\n</div>\n' % html
         else:
             return u''
 
-        return u'<div id="message">\n%s\n</div>\n' % html
+        return u'<div class="message">\n%s\n</div>\n' % html
 
     def trail(self, d):
         """ Assemble page trail
