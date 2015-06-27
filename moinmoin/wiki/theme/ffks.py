@@ -146,8 +146,8 @@ class Theme(ThemeBase):
             #self.credits(d),
             #self.showversion(d, **keywords),
 
+            u'<ul class="footerbar">',
             self.username(d),
-            u'<ul id="footerpages">',
             u'<li><a rel="nofollow" href="/wiki/&Auml;nderungen">&Auml;nderungen</a></li>',
             u'<li><a rel="nofollow" href="/wiki/Hilfe">Hilfe</a></li>',
             u'<li><a rel="nofollow" href="/wiki/Impressum">Impressum</a></li>',

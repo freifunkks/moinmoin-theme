@@ -1,0 +1,37 @@
+/* Footer */
+
+.footerbar{
+  position: relative;
+  z-index: 1;
+
+  @include display-flex;
+  @include align-items(flex-start);
+  @include align-items(center);
+  @include justify-content(flex-end);
+
+  padding: 8px 6px 0 0;
+  right: 0;
+
+  > li {
+    padding: 0 20px 0 0;
+  }
+
+  a, label {
+    color: $grey-color;
+    transition: color .4s;
+  }
+
+  a:hover, label:hover {
+    color: $freifunk-yellow;
+  }
+
+  a.nonexistent {
+    color: $grey-color-light !important;
+    pointer-events: none;
+  }
+}
+
+.footerbar li {
+  list-style: none;
+}
+

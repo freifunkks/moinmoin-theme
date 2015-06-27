@@ -351,7 +351,7 @@ class ThemeBase:
                                                    querystr=query, id='login', rel='nofollow'))
 
         userlinks = [u'<li>%s</li>' % link for link in userlinks]
-        html = u'<ul id="username">%s</ul>' % ''.join(userlinks)
+        html = u'%s' % ''.join(userlinks)
         return html
 
     def splitNavilink(self, text, localize=1):
