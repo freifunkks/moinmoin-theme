@@ -1,9 +1,19 @@
 /* Messages on top of page */
+#header{
+  margin: 0 30px 0 228px;
+
+  & .message {
+    background-color: $freifunk-magenta;
+    margin-bottom: 14px;
+    padding: 20px 36px;
+  }
+}
+
 .message {
   display: flex;
   background-color: $freifunk-blue;
   color: $white-color;
-  padding: 20px 36px;
+  padding: 16px 20px;
 
   & .fa{
     display: inline;

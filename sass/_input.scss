@@ -1,8 +1,18 @@
 /* Input elements */
-input {
+input,
+textarea {
   box-shadow: $inner-shadow-deep;
   border: none;
   padding: 6px 16px;
+}
+
+select {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  background: none;
+  border: none;
+  box-shadow: $inner-shadow-deep;
 }
 
 button,
