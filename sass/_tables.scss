@@ -1,9 +1,28 @@
 /* Alternating rows */
-table.alt-even tr:nth-child(even) {
+table tr:nth-child(even) {
   background: $grey-color-lightest;
+}
+
+table.white tr:nth-child(even),
+table.alt-odd tr:nth-child(even) {
+  background: none;
 }
 
 table.alt-odd tr:nth-child(odd) {
   background: $grey-color-lightest;
+}
+
+/* Tables */
+td,
+th {
+  padding: 8px 12px !important;
+  vertical-align: top;
+}
+
+/* Fixing paragraph padding */
+td p,
+th p {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
