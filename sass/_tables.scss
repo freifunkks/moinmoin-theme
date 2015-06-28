@@ -1,3 +1,25 @@
+/* Tables */
+td,
+th {
+  padding: 8px 12px !important;
+  vertical-align: top;
+}
+
+table {
+  box-shadow: $outer-shadow;
+}
+
+table.noshadow {
+  box-shadow: none;
+}
+
+/* Fixing paragraph padding */
+td p,
+th p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /* Alternating rows */
 table tr:nth-child(even) {
   background: $grey-color-lightest;
@@ -10,19 +32,5 @@ table.alt-odd tr:nth-child(even) {
 
 table.alt-odd tr:nth-child(odd) {
   background: $grey-color-lightest;
-}
-
-/* Tables */
-td,
-th {
-  padding: 8px 12px !important;
-  vertical-align: top;
-}
-
-/* Fixing paragraph padding */
-td p,
-th p {
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
