@@ -430,7 +430,7 @@ class ThemeBase:
             title = page.split_title()
             title = self.shortenPagename(title)
 
-        link = page.link_to(request, title)
+        link = page.url(request)
 
         return pagename, link
 
