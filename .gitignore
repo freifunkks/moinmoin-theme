@@ -1,6 +1,12 @@
+# compiled files
+
+main.css
+*.map
+
+# temporary files
+
 .sass-cache
-wikistatic/ffks/css/main.css.map
+*.bak
 *.swp
 *.swo
-.*.swp
-.*.swo
+*~
