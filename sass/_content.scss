@@ -27,6 +27,8 @@
     background-color: $white-color;
     transition: background-color .4s;
   
+    &.magenta:hover,
+    &.blue:hover,
     &:hover {
       background-color: $freifunk-yellow;
     }
@@ -39,5 +41,8 @@
   }
   & button.yellow {
     background-color: $freifunk-yellow;
+    &:hover {
+      background-color: $freifunk-blue;
+    }
   }
 }

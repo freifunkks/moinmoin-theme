@@ -132,7 +132,7 @@ $height-ubiquiti: 168px;
 
   font: {
     weight: 300;
-    size: 20px;
+    size: 15px;
   }
 
   color: #fff;
@@ -140,6 +140,6 @@ $height-ubiquiti: 168px;
   transition: background-color .4s;
 
   &:hover {
-    background-color: darken($freifunk-blue, 10%);
+    background-color: darken($freifunk-blue, 10%) !important;
   }
 }
