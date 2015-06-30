@@ -483,7 +483,7 @@ class ThemeBase:
                     cls = 'page-link active'
                 else:
                     cls = 'page-link'
-                items.append(item % (cls, pagename, pagename))
+                items.append(item % (cls, link, pagename))
                 found[pagename] = 1
 
         # Add user links to wiki links, eliminating duplicates.
@@ -496,7 +496,7 @@ class ThemeBase:
                     cls = 'userlink active'
                 else:
                     cls = 'userlink'
-                items.append(item % (cls, pagename, pagename))
+                items.append(item % (cls, link, pagename))
                 found[pagename] = 1
 
         # Add current page at end of local pages
