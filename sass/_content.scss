@@ -9,4 +9,35 @@
     padding: 0;
     margin: 0;
   }
+  /* Buttons */
+  & button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0 none;
+  
+    margin-top: 16px;
+    padding: 16px 24px;
+  
+    font: {
+      weight: 300;
+      size: 20px;
+    }
+  
+    color: #fff;
+    background-color: $white-color;
+    transition: background-color .4s;
+  
+    &:hover {
+      background-color: $freifunk-yellow;
+    }
+  }
+  & button.magenta {
+    background-color: $freifunk-magenta;
+  }
+  & button.blue {
+    background-color: $freifunk-blue;
+  }
+  & button.yellow {
+    background-color: $freifunk-yellow;
+  }
 }
