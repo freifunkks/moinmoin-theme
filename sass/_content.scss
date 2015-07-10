@@ -2,7 +2,7 @@
   /* Last modification timestamp */
   & #pageinfo {
     text-align: right;
-	color: $grey-color-light;
+    color: $grey-color-light;
   }
   & ol li p,
   & ul li p {
@@ -44,5 +44,9 @@
     &:hover {
       background-color: $freifunk-blue;
     }
+  }
+  /* Strike through text */
+  & span.strike {
+    text-decoration: line-through;
   }
 }
