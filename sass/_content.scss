@@ -1,4 +1,9 @@
 .page-content {
+  /* Fix margin for first header */
+  & h1:first-child {
+    margin-top: 0;
+  }
+
   /* Last modification timestamp */
   & #pageinfo {
     text-align: right;
@@ -24,7 +29,6 @@
     }
   
     color: #fff;
-    background-color: $white-color;
     transition: background-color .4s;
   
     &.magenta:hover,
