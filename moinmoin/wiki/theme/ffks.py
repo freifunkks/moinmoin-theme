@@ -148,9 +148,9 @@ class Theme(ThemeBase):
 
             u'<ul class="footerbar">',
             self.username(d),
-            u'<li><a rel="nofollow" href="/wiki/&Auml;nderungen">&Auml;nderungen</a></li>',
-            u'<li><a rel="nofollow" href="/wiki/Hilfe">Hilfe</a></li>',
-            u'<li><a rel="nofollow" href="/wiki/Impressum">Impressum</a></li>',
+            u'<li><a rel="nofollow" href="/&Auml;nderungen">&Auml;nderungen</a></li>',
+            u'<li><a rel="nofollow" href="/Hilfe">Hilfe</a></li>',
+            u'<li><a rel="nofollow" href="/Impressum">Impressum</a></li>',
             u'</ul>',
             u'</div>',
 
