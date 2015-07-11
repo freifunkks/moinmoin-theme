@@ -1315,8 +1315,8 @@ var gui_editor_link_text = "%(text)s";
     def disabledEdit(self):
         """ Return a disabled edit link """
         _ = self.request.getText
-        return ('<span class="disabled">%s</span>'
-                % _('Immutable Page'))
+        return ('<a href="%s">%s</a>'
+                % ("Wiki#Inhalte_beitragen" ,_('Immutable Page')))
 
     def infoLink(self, page):
         """ Return link to page information """
