@@ -15,6 +15,7 @@ from MoinMoin import i18n, wikiutil, config, version, caching
 from MoinMoin.action import get_available_actions
 from MoinMoin.Page import Page
 from MoinMoin.util import pysupport
+from MoinMoin.stats import hitcounts
 
 modules = pysupport.getPackageModules(__file__)
 
@@ -765,6 +766,15 @@ class ThemeBase:
             return self.request.action in contentActions
         return False
 
+    def pagehits(self, page):
+        """ Returns hits/day """
+        request = self.request
+        pagename = page.page_name
+        cache_days, cache_views, cache_edits = hitcounts.get_data(pagename, request, filterpage=pagename)
+
+        return "%s" % (sum(cache_views) / len(cache_days))
+        #return "<br>%s <br> %s <br> %s <br>" % (cache_days, cache_views, cache_edits)
+
     def pageinfo(self, page):
         """ Return html fragment with page meta data
 
@@ -790,6 +800,8 @@ class ThemeBase:
                 #    pagename = "%s: %s" % (self.request.cfg.interwikiname, pagename)
                 #info = "%s  (%s)" % (wikiutil.escape(pagename), info)
                 info = _("last modified %(time)s") % info
+                info += " und %s " % self.pagehits(page)
+                info += _("Views/day")
                 html = '<p id="pageinfo" class="info"%(lang)s>%(info)s</p>\n' % {
                     'lang': self.ui_lang_attr(),
                     'info': info
