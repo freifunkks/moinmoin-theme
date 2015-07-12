@@ -993,6 +993,7 @@ var search_hint = "%(search_hint)s";
         rev = request.rev
 
         menu = [
+            'linkto',
             'raw',
             'print',
             'RenderAsDocbook',
@@ -1015,6 +1016,7 @@ var search_hint = "%(search_hint)s";
             # action: menu title
             '__title__': _("More Actions:"),
             # Translation may need longer or shorter separator
+            'linkto': _('Links auf diese Seite'), # yeah, i know, but...
             'raw': _('Raw Text'),
             'print': _('Print View'),
             'refresh': _('Delete Cache'),
@@ -1047,6 +1049,12 @@ var search_hint = "%(search_hint)s";
             # removes excluded actions from the more actions menu
             if action in request.cfg.actions_excluded:
                 continue
+
+            # LinkTo
+            if action == 'linkto':
+                data['action'] = 'fullsearch&fullsearch=&context=180&value=linkto:%s' % page.page_name
+
+                # ?action=fullsearch&context=180&fullsearch=&value=linkto%3AFreifunk+Historie
 
             # Enable delete cache only if page can use caching
             if action == 'refresh':
