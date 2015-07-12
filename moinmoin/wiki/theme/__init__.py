@@ -133,8 +133,8 @@ class ThemeBase:
     # Standard set of style sheets
     stylesheets = (
         # media         basename
-        ('all',         'main'),
         ('all',         'normalize'),
+        ('all',         'main'),
         ('all',         'font-awesome.min'),
         ('all',         'ionicons.min'),
         ('screen',      'screen'),
@@ -1065,8 +1065,6 @@ var search_hint = "%(search_hint)s";
             # LinkTo
             if action == 'linkto':
                 data['action'] = 'fullsearch&fullsearch=&context=180&value=linkto:%s' % page.page_name
-
-                # ?action=fullsearch&context=180&fullsearch=&value=linkto%3AFreifunk+Historie
 
             # Enable delete cache only if page can use caching
             if action == 'refresh':
