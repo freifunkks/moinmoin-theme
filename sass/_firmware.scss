@@ -8,6 +8,10 @@ $height-linksys:  84px;
 $height-tplink:   1016px;
 $height-ubiquiti: 168px;
 
+.download-form {
+  margin-top: 32px;
+}
+
 .vendor,
 .device,
 .version {
@@ -128,6 +132,7 @@ $height-ubiquiti: 168px;
   border: 0 none;
 
   margin-top: 16px;
+  margin-bottom: 16px;
   padding: 16px 24px;
 
   font: {
