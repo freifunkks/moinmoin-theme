@@ -78,4 +78,34 @@
       content: counters(item, ".") ". "; counter-increment: item
     }
   }
+
+  /* Block quotes */
+  & blockquote {
+    &:before {
+      content: "» ";
+      float: left;
+      text-align: right;
+      width: 13px;
+    }
+
+	/* The quote itself */
+    & p:first-child:after {
+      content: " «";
+	}
+
+    &:before,
+    & p:first-child:after,
+    & p:last-child:before {
+      color: $grey-color-light;
+    }
+
+	/* Author of the quote */
+    & p:last-child:before {
+      content: "— ";
+	}
+
+    & p:last-child{
+      text-align: right;
+	}
+  }
 }
