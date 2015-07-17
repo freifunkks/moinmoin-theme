@@ -20,6 +20,11 @@ th p {
   margin: 0 !important;
 }
 
+/* Fixing wrong image aspect ratio bug in Chromium/Chrome */
+td img {
+  max-width: none; 
+}
+
 /* Alternating rows */
 table tr:nth-child(even) {
   background: $grey-color-lightest;
