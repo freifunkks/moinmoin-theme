@@ -42,9 +42,9 @@ class Config(multiconfig.DefaultConfig):
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="/wikistatic/icons/mstile-144x144.png">
     <meta name="msapplication-config" content="/wikistatic/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">'''
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="/wikistatic/ffks/js/jquery-2.1.4.min.js"></script>'''
 
     # when it looks acceptable
     theme_default = u'ffks'
     theme_force = True
-
