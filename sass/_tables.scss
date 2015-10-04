@@ -31,6 +31,7 @@ table tr:nth-child(even) {
   background: $grey-color-lightest;
 }
 
+table.image tr:nth-child(even),
 table.white tr:nth-child(even),
 table.alt-odd tr:nth-child(even) {
   background: none;
@@ -43,4 +44,5 @@ table.alt-odd tr:nth-child(odd) {
 table.image {
   font-size: $small-font-size;
   text-align: right;
+  color: $grey-color;
 }
