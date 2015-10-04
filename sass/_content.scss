@@ -55,7 +55,7 @@
   }
 
   & .table-of-contents {
-    padding: 8px 12px;
+	padding: 8px 26px;
     box-shadow: $outer-shadow;
 
     & p.table-of-contents-heading {
@@ -67,6 +67,7 @@
        instead of only
         2. */
     & ol {
+      padding: 0;
       counter-reset: item
     }
 
