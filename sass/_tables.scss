@@ -9,6 +9,7 @@ table {
   box-shadow: $outer-shadow;
 }
 
+table.image,
 table.noshadow {
   box-shadow: none;
 }
@@ -39,3 +40,7 @@ table.alt-odd tr:nth-child(odd) {
   background: $grey-color-lightest;
 }
 
+table.image {
+  font-size: $small-font-size;
+  text-align: right;
+}
