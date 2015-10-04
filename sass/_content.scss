@@ -16,8 +16,11 @@
   }
   & ul {
     list-style-type: "•";
-    padding-left: 6px;
+    padding-left: 23px;
     & li {
+      padding-left: 6px;
+    }   
+    & ul {
       padding-left: 6px;
     }   
   }
