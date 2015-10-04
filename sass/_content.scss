@@ -57,6 +57,7 @@
   & .table-of-contents {
 	padding: 8px 26px;
     box-shadow: $outer-shadow;
+    display: inline-block;
 
     & p.table-of-contents-heading {
       display:none; 
