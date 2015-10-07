@@ -1,9 +1,4 @@
 .page-content {
-  /* Fix margin for first header */
-  & h1:first-child {
-    margin-top: 0;
-  }
-
   /* Last modification timestamp */
   & #pageinfo {
     text-align: right;
