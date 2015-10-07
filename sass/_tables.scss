@@ -51,3 +51,7 @@ table.image tr:nth-child(even) td {
   padding: 0px 12px 18px;
 }
 
+table.image tr:nth-child(odd) td {
+  vertical-align: bottom;
+}
+
