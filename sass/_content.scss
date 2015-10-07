@@ -118,3 +118,9 @@
 	}
   }
 }
+
+/* Fix margin for first header */
+#content > h1:first-of-type {
+  margin-top: 0;
+}
+
