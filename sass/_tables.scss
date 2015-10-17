@@ -10,6 +10,7 @@ table {
 }
 
 table.image,
+table.imagefloat,
 table.noshadow {
   box-shadow: none;
 }
@@ -32,6 +33,7 @@ table tr:nth-child(even) {
 }
 
 table.image tr:nth-child(even),
+table.imagefloat tr:nth-child(even),
 table.white tr:nth-child(even),
 table.alt-odd tr:nth-child(even) {
   background: none;
@@ -41,17 +43,36 @@ table.alt-odd tr:nth-child(odd) {
   background: $grey-color-lightest;
 }
 
-table.image {
+table.image,
+table.imagefloat {
   font-size: $small-font-size;
   text-align: right;
   color: $grey-color;
 }
 
-table.image tr:nth-child(even) td {
+table.image tr:nth-child(even) td,
+table.imagefloat tr:nth-child(even) td {
   padding: 0px 12px 18px;
 }
 
-table.image tr:nth-child(odd) td {
+table.image tr:nth-child(odd) td,
+table.imagefloat tr:nth-child(odd) td {
   vertical-align: bottom;
+}
+
+table.imagefloat {
+  float: right;
+}
+
+table.imagefloat {
+  width: $image-float-witdh;
+}
+
+table.imagefloat img {
+  width: $image-float-witdh !important;
+}
+
+table.imagefloat td {
+  padding-right: 0;
 }
 
