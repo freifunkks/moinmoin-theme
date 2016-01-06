@@ -137,9 +137,6 @@ class ThemeBase:
         ('all',         'main'),
         ('all',         'font-awesome.min'),
         ('all',         'ionicons.min'),
-        ('screen',      'screen'),
-        ('print',       'print'),
-        ('projection',  'projection'),
         )
 
     # Used in print mode
