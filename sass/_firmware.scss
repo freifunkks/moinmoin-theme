@@ -2,11 +2,16 @@
 
 // fixed heights are the only working option to do
 // good slideUp / slideDown transitions without JS
-$height-buffalo:  84px;
-$height-dlink:    84px;
-$height-linksys:  84px;
-$height-tplink:   1016px;
-$height-ubiquiti: 168px;
+$row-counts: (
+  buffalo: 2,
+  d-link: 2,
+  gl-inet: 1,
+  linksys: 1,
+  netgear: 3,
+  tp-link: 16,
+  ubiquiti: 7,
+  wd: 1
+);
 
 .download-form {
   margin-top: 32px;
@@ -56,24 +61,10 @@ input.version {
   transition: height .4s;
 }
 
-#vendor-buffalo:checked + label + .device-list {
-  height: $height-buffalo;
-}
-
-#vendor-d-link:checked + label + .device-list {
-  height: $height-dlink;
-}
-
-#vendor-linksys:checked + label + .device-list {
-  height: $height-linksys;
-}
-
-#vendor-tp-link:checked + label + .device-list {
-  height: $height-tplink;
-}
-
-#vendor-ubiquiti:checked + label + .device-list {
-  height: $height-ubiquiti;
+@each $vendor, $row-count in $row-counts {
+  #vendor-#{$vendor} + label + .device-list {
+    height: $row-count * 84px;
+  }
 }
 
 .device-wrap {
