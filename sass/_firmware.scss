@@ -62,7 +62,7 @@ input.version {
 }
 
 @each $vendor, $row-count in $row-counts {
-  #vendor-#{$vendor} + label + .device-list {
+  #vendor-#{$vendor}:checked + label + .device-list {
     height: $row-count * 84px;
   }
 }
