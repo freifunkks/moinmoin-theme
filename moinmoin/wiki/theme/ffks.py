@@ -150,6 +150,7 @@ class Theme(ThemeBase):
             self.username(d),
             u'<li><a rel="nofollow" href="/&Auml;nderungen">&Auml;nderungen</a></li>',
             u'<li><a rel="nofollow" href="/Hilfe">Hilfe</a></li>',
+            u'<li><a rel="nofollow" href="/Datenschutz">Datenschutz</a></li>',
             u'<li><a rel="nofollow" href="/Impressum">Impressum</a></li>',
             u'</ul>',
             u'</div>',
